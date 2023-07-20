@@ -3,7 +3,6 @@
 from decimal import Decimal
 
 number = Decimal(input("Введите число: "))
-print(number)
 while number % 1 > 0:
     number *= 10
 number = int(number)
@@ -13,5 +12,5 @@ while number > 10:
     nums.append(number % 10)
     number //= 10
 nums.append(number)
-print(nums)
+# print(nums)
 print(f"Сумма цифр: {sum(nums)}")

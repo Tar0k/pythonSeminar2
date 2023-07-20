@@ -14,7 +14,7 @@ from datetime import datetime
 
 def check_morgan():
     predicate_number = random.randint(3, 15)
-    predicates = array('b', [random.choice([True, False]) for i in range(predicate_number)])
+    predicates = array('b', [random.choice([True, False]) for _ in range(predicate_number)])
     print(f"Рандомный предикат: {''.join([str(item) for item in predicates])}", end=" ")
 
     left_side = not reduce(left_function, predicates)
@@ -35,7 +35,7 @@ def right_function(accumulator, next_element):
 
 start_time = datetime.now()
 
-for iterator in range(100):
+for _ in range(100):
     check_morgan()
 
 print(f"Время выполнения {datetime.now() - start_time}")

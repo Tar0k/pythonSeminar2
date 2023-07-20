@@ -15,7 +15,5 @@ def eagle_tail(combination):
 
 
 print("Для следующих комбинаций необходимое минимальное количество переворотов")
-
-
 # [print(f"{key}: {value if value != 0 else 'не требуется'}") for key, value in combinations.items()]
 [print(f"{eagle_tail(key)}: {value if value != 0 else 'не требуется'}") for key, value in combinations.items()]
